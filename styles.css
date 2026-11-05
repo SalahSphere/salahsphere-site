@@ -179,6 +179,7 @@ h3 { font-size: 24px; }
 .hero h1 .nw { white-space: nowrap; }
 .hero .lead { margin-top: 22px; }
 .hero-note { margin-top: 18px; font-size: 14px; color: var(--muted); }
+.hero-note strong { font-weight: inherit; font-family: var(--serif); font-style: italic; font-size: 1.14em; color: var(--gold-hi); }
 
 .phones { position: relative; height: 640px; }
 .phones .phone { position: absolute; top: 40px; width: 270px; }
@@ -191,9 +192,9 @@ h3 { font-size: 24px; }
   background: radial-gradient(circle, rgba(231, 190, 105, 0.26), rgba(231, 190, 105, 0.05) 45%, transparent 70%);
   filter: blur(8px); z-index: 0;
 }
-.hero-arch { width: 700px; left: 50%; top: -60px; transform: translateX(-50%); opacity: 0.55; }
+.hero-arch { width: 700px; left: 50%; top: -60px; transform: translateX(-50%); opacity: 0.8; }
 .d-stars {
-  inset: 0; opacity: 0.22; background: url("assets/patterns/tile-stars-gold.svg") 0 0 / 104px 104px repeat;
+  inset: 0; opacity: 0.34; background: url("assets/patterns/tile-stars-gold.svg") 0 0 / 104px 104px repeat;
   -webkit-mask-image: radial-gradient(ellipse 60% 70% at 18% 8%, #000, transparent 70%);
           mask-image: radial-gradient(ellipse 60% 70% at 18% 8%, #000, transparent 70%);
 }
@@ -214,20 +215,21 @@ h3 { font-size: 24px; }
   .hero-grid { grid-template-columns: 1fr; gap: 0; }
   .phones { height: 560px; margin-top: 0; }
   .phones .phone { width: 240px; }
+  .hero-arch { width: 600px; top: 24px; }
 }
 @media (max-width: 520px) {
   .phones { height: 470px; }
   .phones .phone { width: 210px; }
   .phones .p-left { transform: translateX(-104%) rotate(-7deg) scale(0.84); }
   .phones .p-right { transform: translateX(4%) rotate(7deg) scale(0.84); }
-  .hero-arch { width: 380px; top: -10px; }
+  .hero-arch { width: 400px; top: 18px; }
   .phones .halo { width: 380px; height: 380px; }
 }
 
 /* ---------- A pause ---------- */
 .pause { border-bottom: 1px solid var(--line-soft); }
-.d-pause-disc { width: 760px; left: -330px; top: 50%; transform: translateY(-50%); opacity: 0.22; }
-.d-pause-band { width: 96px; right: max(18px, calc(50% - 700px)); top: 6%; bottom: 6%; opacity: 0.32; }
+.d-pause-disc { width: 760px; left: -330px; top: 50%; transform: translateY(-50%); opacity: 0.42; }
+.d-pause-band { width: 96px; right: max(18px, calc(50% - 700px)); top: 6%; bottom: 6%; opacity: 0.5; }
 .pause .section-head em { font-family: var(--serif); color: var(--cream); font-size: 1.04em; white-space: nowrap; }
 .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; max-width: 1000px; margin: 0 auto; }
 .stat {
@@ -287,7 +289,7 @@ section { padding: clamp(70px, 10vw, 130px) 0; }
   content: ""; position: absolute; width: min(460px, 100vw); height: min(460px, 100vw); top: 52%; left: 50%; transform: translate(-50%, -50%);
   background: radial-gradient(circle, rgba(52, 76, 160, 0.5), rgba(231, 190, 105, 0.05) 45%, transparent 68%); z-index: 0;
 }
-.feature-media .arch { width: 460px; left: 50%; top: 0; transform: translateX(-50%); opacity: 0.46; }
+.feature-media .arch { width: 460px; left: 50%; top: 0; transform: translateX(-50%); opacity: 0.72; }
 .feature-media .phone { width: 290px; position: relative; z-index: 1; }
 .pat-cap { position: relative; z-index: 1; margin-top: 22px; font-size: 13.5px; color: var(--muted); text-align: center; letter-spacing: 0.01em; }
 .pat-cap i { font-family: var(--serif); font-size: 15.5px; color: var(--gold); }
@@ -307,6 +309,11 @@ section { padding: clamp(70px, 10vw, 130px) 0; }
   .feature-media .arch { width: 380px; }
   .feature-media .phone.second { width: 190px; }
 }
+
+/* Du'as: a morning phone (light) and an evening phone (dark), side by side */
+.duo { position: relative; z-index: 1; display: flex; gap: 18px; align-items: flex-start; }
+.duo .phone { width: 230px; }
+@media (max-width: 880px) { .duo { gap: 12px; } .duo .phone { width: 42vw; max-width: 220px; } }
 
 /* Small feature cards */
 .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
@@ -335,7 +342,7 @@ section { padding: clamp(70px, 10vw, 130px) 0; }
     #080D1C;
 }
 .manifesto > .wrap { max-width: 860px; }
-.d-band-l, .d-band-r { width: 88px; top: 0; bottom: 0; opacity: 0.34; }
+.d-band-l, .d-band-r { width: 88px; top: 0; bottom: 0; opacity: 0.55; }
 .d-band-l { left: max(16px, calc(50% - 660px)); }
 .d-band-r { right: max(16px, calc(50% - 660px)); }
 .manifesto h2 { font-size: clamp(40px, 6vw, 74px); margin-top: 18px; line-height: 1.08; }
@@ -424,9 +431,9 @@ section { padding: clamp(70px, 10vw, 130px) 0; }
 .paper .quote { text-align: center; font-family: var(--serif); font-style: italic; font-size: clamp(24px, 3vw, 32px); color: var(--paper-ink); margin: 54px auto 0; max-width: 26em; }
 .paper .quote small { display: block; margin-top: 12px; font-family: var(--sans); font-style: normal; font-size: 14px; color: #6B7391; }
 .paper .quote a { color: #9A6E22; }
-.d-paper-disc { width: 620px; right: -240px; top: -200px; opacity: 0.32; }
+.d-paper-disc { width: 680px; right: -220px; top: -190px; opacity: 0.62; }
 .d-paper-tile {
-  left: 0; bottom: 0; width: 520px; height: 420px; opacity: 0.26;
+  left: 0; bottom: 0; width: 640px; height: 520px; opacity: 0.5;
   background: url("assets/patterns/tile-quatrefoil-bronze.svg") 0 0 / 44px repeat;
   -webkit-mask-image: radial-gradient(ellipse at 0% 100%, #000, transparent 68%);
           mask-image: radial-gradient(ellipse at 0% 100%, #000, transparent 68%);
@@ -435,7 +442,7 @@ section { padding: clamp(70px, 10vw, 130px) 0; }
 
 /* Closing medallion */
 .d-close-disc {
-  width: 620px; left: 50%; top: -150px; transform: translateX(-50%); opacity: 0.24;
+  width: 620px; left: 50%; top: -150px; transform: translateX(-50%); opacity: 0.4;
   -webkit-mask-image: linear-gradient(#000 45%, transparent 78%); mask-image: linear-gradient(#000 45%, transparent 78%);
 }
 @media (max-width: 760px) { .d-close-disc { width: 460px; top: -110px; } }
@@ -511,7 +518,7 @@ section { padding: clamp(70px, 10vw, 130px) 0; }
 /* Long-form page tops carry a medallion too */
 .page-top { padding-bottom: 6px; }
 .d-page-disc {
-  width: 660px; left: 50%; top: -330px; transform: translateX(-50%); opacity: 0.22;
+  width: 660px; left: 50%; top: -330px; transform: translateX(-50%); opacity: 0.36;
   -webkit-mask-image: linear-gradient(#000 50%, transparent 88%); mask-image: linear-gradient(#000 50%, transparent 88%);
 }
 @media (max-width: 760px) { .d-page-disc { width: 460px; top: -220px; } }
