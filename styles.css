@@ -567,3 +567,61 @@ section { padding: clamp(70px, 10vw, 130px) 0; }
   .brand { gap: 10px; }
   .brand span { font-size: 18px; }
 }
+
+/* ---------- Guides ---------- */
+.crumbs { font-size: 14px; color: var(--muted); margin: 0 0 4px; }
+.crumbs a { color: var(--muted); text-decoration: none; }
+.crumbs a:hover { color: var(--gold-hi); }
+.steps { list-style: none; padding: 0 !important; margin: 18px 0 0; counter-reset: step; }
+.steps > li {
+  position: relative; border: 1px solid var(--line-soft); border-radius: 20px; padding: 22px 24px 18px 80px; margin: 16px 0;
+  background: rgba(255,255,255,0.02);
+}
+.steps > li::before {
+  counter-increment: step; content: counter(step); position: absolute; left: 22px; top: 20px; width: 40px; height: 40px; border-radius: 50%;
+  display: grid; place-items: center; font-family: var(--serif); font-size: 20px; color: var(--ink);
+  background: linear-gradient(135deg, var(--gold-hi), var(--gold) 55%, var(--gold-deep));
+}
+.steps h3 { margin: 6px 0 6px !important; font-size: 23px !important; }
+.steps p { margin: 0 0 8px; }
+.steps ul { margin: 6px 0; }
+.steps .tip { color: var(--muted); font-size: 15.5px; }
+.src { font-size: 14px; color: var(--muted) !important; margin: 10px 0 0 !important; }
+.say { border-left: 3px solid var(--gold); padding: 4px 0 4px 16px; margin: 12px 0; }
+.say .ar {
+  font-family: "Amiri", "Noto Naskh Arabic", "Geeza Pro", "Traditional Arabic", "Arabic Typesetting", serif; font-size: 25px; line-height: 1.9;
+  direction: rtl; text-align: right; color: var(--cream); margin: 0 0 4px;
+}
+.say .tr { font-style: italic; color: var(--gold-hi) !important; margin: 0; }
+.say .mn { color: var(--muted) !important; margin: 4px 0 0; }
+.units { width: 100%; border-collapse: collapse; margin: 12px 0 0; }
+.units th, .units td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line-soft); }
+.units th { color: var(--gold-hi); font-weight: 600; font-size: 15px; }
+.app-cta {
+  display: grid; grid-template-columns: 150px 1fr; gap: 26px; align-items: center; margin: 60px 0 0;
+  border: 1px solid var(--line); border-radius: 24px; padding: 24px 26px;
+  background: radial-gradient(ellipse at 0% 0%, rgba(231,190,105,0.14), transparent 60%), rgba(255,255,255,0.02);
+}
+.app-cta img { width: 100%; height: auto; border-radius: 22px; box-shadow: 0 20px 50px rgba(0,0,0,0.5); }
+.app-cta h2 { margin: 0 0 8px !important; font-size: 28px !important; }
+.app-cta p { margin: 0 0 14px; }
+.next-guide { margin: 34px 0 0; font-size: 17px; }
+.guide-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; margin: 26px 0 0; }
+.guide-card {
+  display: block; text-decoration: none; border: 1px solid var(--line); border-radius: 22px; padding: 24px 24px 20px;
+  background: rgba(255,255,255,0.02); color: var(--text);
+}
+.guide-card:hover { border-color: rgba(231,190,105,0.5); background: rgba(231,190,105,0.05); color: var(--text); }
+.guide-card h2 { margin: 0 0 8px !important; font-size: 26px !important; color: var(--cream); }
+.guide-card p { margin: 0; color: var(--muted); }
+.guide-card span { display: inline-block; margin-top: 14px; color: var(--gold); font-weight: 600; }
+@media (max-width: 640px) {
+  .steps > li { padding: 20px 18px 16px; }
+  .steps > li::before { position: static; margin-bottom: 8px; width: 36px; height: 36px; font-size: 18px; }
+  .app-cta { grid-template-columns: 1fr; }
+  .app-cta img { max-width: 170px; }
+}
+.guide-link { margin: 18px 0 0; font-weight: 600; }
+.guide-link a::after { content: " →"; }
+/* With Guides in the header, phones drop the link to the page you are on. */
+@media (max-width: 640px) { .nav-links a[aria-current="page"] { display: none; } }
