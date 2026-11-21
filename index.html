@@ -94,8 +94,8 @@
       <span>Salah Sphere</span>
     </a>
     <nav class="nav-links" aria-label="Main">
-      <a class="hide-sm" href="#inside">Inside the app</a>
-      <a class="hide-md" href="#no-subscription">No subscription</a>
+      <a class="hide-sm" href="#inside">A day of salah</a>
+      <a class="hide-md" href="#price">Price</a>
       <a href="guides.html">Guides</a>
       <a class="hide-sm" href="privacy.html">Privacy</a>
       <a href="support.html">Support</a>
@@ -106,47 +106,94 @@
 
 <main id="main">
 
-  <!-- ============ Hero ============ -->
-  <section class="hero" aria-labelledby="hero-title">
-    <div class="deco d-stars" aria-hidden="true"></div>
-    <div class="wrap hero-grid">
+  <!-- ============ The hour before Fajr ============ -->
+  <section class="predawn" aria-labelledby="hero-title">
+    <div class="stars" aria-hidden="true"></div>
+    <div class="horizon" aria-hidden="true"></div>
+    <div class="wrap hero2">
       <div class="reveal">
-        <span class="eyebrow">Salah · Qibla · Qur'an · Du'a</span>
+        <nav aria-label="One day of salah">
+          <ol class="day">
+            <li class="is-next"><a href="#fajr">Fajr</a></li>
+            <li><a href="#dhuhr">Dhuhr</a></li>
+            <li><a href="#asr">Asr</a></li>
+            <li><a href="#maghrib">Maghrib</a></li>
+            <li><a href="#isha">Isha</a></li>
+          </ol>
+        </nav>
         <h1 id="hero-title"><span class="nw">Five times a day,</span><br><span class="gold-text">the world can wait.</span></h1>
-        <p class="lead">Your phone was designed to hold your attention. Salah Sphere is designed to give it back: accurate salah times, the Qibla, and guided salah you can follow along with, then nothing else asking for you.</p>
-        <div class="actions">
-          <span class="soon"><span class="dot" aria-hidden="true"></span><span class="soon-text">Coming Ramadan 2027<span class="sep"> · </span><span class="nw">Android &amp; iPhone</span></span></span>
-          <a class="btn btn-ghost" href="#inside">See inside</a>
-        </div>
-        <p class="hero-note">No adverts. No tracking. No account. And <strong>never, ever a subscription.</strong></p>
+        <p class="lead">Your phone was designed to hold your attention. Salah Sphere is designed to give it back: the right times, the right direction, and guidance you can follow, then nothing else asking for you.</p>
+        <p class="facts">Free to download. <b>£9.99 once.</b> Never a subscription.</p>
+        <p class="when">Coming Ramadan 2027, on Android and iPhone. <a href="#price">What's free, and what isn't</a></p>
       </div>
-      <div class="phones reveal" aria-hidden="true">
-        <div class="deco arch arch-khatam hero-arch"></div>
-        <div class="halo"></div>
-        <div class="phone p-left"><img src="assets/shots/guided-salah-woman.webp" alt="" width="390" height="844"></div>
-        <div class="phone p-mid"><img src="assets/shots/salah-times.webp" alt="" width="390" height="844"></div>
-        <div class="phone p-right"><img src="assets/shots/guided-salah-fatihah.webp" alt="" width="390" height="844"></div>
+      <div class="stage reveal">
+        <div class="notif" role="img" aria-label="A Salah Sphere notification. Reminder: it's time.">
+          <img src="assets/img/icon-96.png" alt="" width="38" height="38">
+          <b>Salah Sphere</b><span class="t">now</span>
+          <p>Reminder · It's time.</p>
+        </div>
+        <div class="phone"><img src="assets/shots/salah-times.webp" alt="The Salah Times screen in the Midnight theme: the salah now, the next one, and today's five salahs in London" width="390" height="844"></div>
+        <p class="notif-cap"><b>That is the whole notification.</b> It never names the salah, and there is no adhan.</p>
       </div>
     </div>
   </section>
 
-  <div class="promises" role="region" aria-label="Promises">
-    <ul class="wrap">
-      <li>No adverts</li>
-      <li>No tracking</li>
-      <li>No account</li>
-      <li>Works offline</li>
-      <li>One price, never a subscription</li>
-    </ul>
-  </div>
+  <div id="inside">
 
-  <!-- ============ A pause ============ -->
-  <section class="pause has-deco" aria-labelledby="pause-title">
-    <div class="deco disc disc-zellige d-pause-disc" aria-hidden="true"></div>
-    <div class="deco band band-ogee d-pause-band" aria-hidden="true"></div>
+  <!-- ============ Fajr ============ -->
+  <section class="hour fajr" id="fajr" aria-labelledby="fajr-title">
+    <div class="wrap">
+      <div class="hour-mark"><b>Fajr</b><span>before sunrise</span><i></i></div>
+      <div class="copy reveal">
+        <div>
+          <h2 id="fajr-title">The day begins before the sun does.</h2>
+          <p>Guided Fajr walks you through the two fard rak'ahs: every movement, and every word in clear transliteration, at one steady pace. Press play, set the phone down in front of you, and begin. After that, nothing needs a tap.</p>
+          <ul class="ticks">
+            <li>Hanafi or Shafi'i, for brothers and sisters</li>
+            <li>Every word in clear transliteration, phrase by phrase</li>
+            <li>Memorise each part, with its meaning, before you begin</li>
+          </ul>
+        </div>
+        <div>
+          <p class="free"><b>Free</b> <span>The two fard rak'ahs of Fajr, with Al-Falaq then An-Nas</span></p>
+          <p class="unlock-note">Dhuhr, Asr, Maghrib and Isha, the Sunnah, Witr and Tahajjud, Memorise the salah and your own choice of surahs come with the one-time unlock.</p>
+          <p class="guide-link"><a href="how-to-pray-salah.html">Read the step-by-step salah guide</a></p>
+        </div>
+      </div>
+
+      <figure class="rakah reveal">
+        <figcaption>
+          <h3>One rak'ah, as the app shows it</h3>
+          <p class="sub">The app's own figures, in the Hanafi way. In the app, each step keeps the last position faint beside the new one, with gold arrows between them.</p>
+        </figcaption>
+        <ol class="rk">
+          <li><div class="fig"><img src="assets/positions/man_takbir.webp" alt="" width="120" height="300" loading="lazy"></div><span>Takbir<small>both hands raised</small></span></li>
+          <li class="chev" aria-hidden="true"><svg viewBox="0 0 22 16" width="22" height="16"><path d="M2 2l6 6-6 6M8 2l6 6-6 6M14 2l6 6-6 6" fill="none" stroke="#C8933F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
+          <li><div class="fig"><img src="assets/positions/man_qiyam_hanafi.webp" alt="" width="87" height="300" loading="lazy"></div><span>Standing<small>Al-Fatihah</small></span></li>
+          <li class="chev" aria-hidden="true"><svg viewBox="0 0 22 16" width="22" height="16"><path d="M2 2l6 6-6 6M8 2l6 6-6 6M14 2l6 6-6 6" fill="none" stroke="#C8933F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
+          <li class="ruku"><div class="fig"><img src="assets/positions/man_ruku.webp" alt="" width="193" height="236" loading="lazy"></div><span>Ruku<small>bowing</small></span></li>
+          <li class="chev" aria-hidden="true"><svg viewBox="0 0 22 16" width="22" height="16"><path d="M2 2l6 6-6 6M8 2l6 6-6 6M14 2l6 6-6 6" fill="none" stroke="#C8933F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
+          <li><div class="fig"><img src="assets/positions/man_standing_after_ruku.webp" alt="" width="83" height="300" loading="lazy"></div><span>Rising<small>from ruku</small></span></li>
+          <li class="chev" aria-hidden="true"><svg viewBox="0 0 22 16" width="22" height="16"><path d="M2 2l6 6-6 6M8 2l6 6-6 6M14 2l6 6-6 6" fill="none" stroke="#C8933F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
+          <li class="sujood"><div class="fig"><img src="assets/positions/man_sujood.webp" alt="" width="234" height="120" loading="lazy"></div><span>Sujood<small>forehead down</small></span></li>
+          <li class="chev" aria-hidden="true"><svg viewBox="0 0 22 16" width="22" height="16"><path d="M2 2l6 6-6 6M8 2l6 6-6 6M14 2l6 6-6 6" fill="none" stroke="#C8933F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
+          <li class="sit"><div class="fig"><img src="assets/positions/man_jalsah.webp" alt="" width="133" height="196" loading="lazy"></div><span>Sitting<small>between the two</small></span></li>
+          <li class="chev" aria-hidden="true"><svg viewBox="0 0 22 16" width="22" height="16"><path d="M2 2l6 6-6 6M8 2l6 6-6 6M14 2l6 6-6 6" fill="none" stroke="#C8933F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
+          <li class="sujood"><div class="fig"><img src="assets/positions/man_sujood.webp" alt="" width="234" height="120" loading="lazy"></div><span>Sujood<small>the second</small></span></li>
+        </ol>
+        <p class="foot">There is a woman figure too, and the Shafi'i way. The whole salah runs like this, step by step.</p>
+      </figure>
+    </div>
+  </section>
+
+  <div class="turn t-sunrise" aria-hidden="true"><span>Sunrise</span></div>
+
+  <!-- ============ Morning: seventeen times a day ============ -->
+  <section class="lit morning has-deco" aria-labelledby="pause-title">
+    <div class="deco disc disc-zellige-bronze d-morning-disc" aria-hidden="true"></div>
     <div class="wrap">
       <div class="section-head reveal">
-        <span class="eyebrow">Before you scroll on</span>
+        <span class="eyebrow">Between Fajr and Dhuhr</span>
         <h2 id="pause-title">Seventeen times a day,<br><span class="gold-text">you ask to be guided.</span></h2>
         <p>Every rak'ah begins with Al-Fatihah, and at its heart the same request: <em>guide us to the straight path</em>. Across the five fard salahs, that is seventeen times between dawn and night. How often do we notice what we are asking for?</p>
       </div>
@@ -171,56 +218,83 @@
     </div>
   </section>
 
-  <!-- ============ Inside the app ============ -->
-  <section id="inside" aria-labelledby="inside-title">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <span class="eyebrow">Inside the app</span>
-        <h2 id="inside-title">Everything for salah.<br><span class="gold-text">Nothing to distract from it.</span></h2>
-        <p>Knowing when, facing the right way, and performing salah well, with help that steps back once you no longer need it.</p>
-      </div>
+  <div class="turn t-noon" aria-hidden="true"><span>Midday</span></div>
 
+  <!-- ============ Dhuhr ============ -->
+  <section class="hour lit dhuhr" id="dhuhr" aria-labelledby="dhuhr-title">
+    <div class="wrap">
+      <div class="hour-mark"><b>Dhuhr</b><span>the middle of the working day</span><i></i></div>
       <article class="feature reveal">
-        <figure class="feature-media">
-          <div class="deco arch arch-khatam"></div>
-          <div class="phone"><img src="assets/shots/salah-times.webp" alt="The Salah Times screen in the Midnight theme: Maghrib now, Isha next, and today's five salahs in London" width="390" height="844" loading="lazy"></div>
-          <figcaption class="pat-cap">Behind: <i>khatam</i>, the eight-point star of the Midnight theme</figcaption>
+        <figure class="feature-media notif-media" aria-label="The two notifications Salah Sphere sends for a salah">
+          <div class="notif"><img src="assets/img/icon-96.png" alt="" width="38" height="38"><b>Salah Sphere</b><span class="t">10 min ago</span><p>In 10 minutes.</p></div>
+          <div class="notif"><img src="assets/img/icon-96.png" alt="" width="38" height="38"><b>Salah Sphere</b><span class="t">now</span><p>Reminder · It's time.</p></div>
+          <figcaption class="pat-cap">What a meeting room would see on your phone. Nothing more.</figcaption>
         </figure>
         <div>
-          <span class="eyebrow">Salah times</span>
-          <h3>Time is the first thing every salah asks of you.</h3>
-          <p>Salah Sphere works out each time on your phone for exactly where you are, using the method followed where you live. The only question left is whether you answer.</p>
+          <h2 id="dhuhr-title">Salah at work, without announcing it to the room.</h2>
+          <p>When Dhuhr comes in, your phone says it's time and nothing else: no adhan in a quiet office, and no name of the salah on the screen. Choose a calm sound, a buzz, or silence.</p>
           <ul class="ticks">
-            <li>Standard or Hanafi Asr, and fine-tuning to match your local masjid</li>
-            <li>The middle of the night and the last third, for Tahajjud</li>
-            <li>Discreet reminders, never a full adhan in a quiet room</li>
-            <li>A next-salah widget for your home screen</li>
+            <li>Times worked out on your phone for where you are, with no internet needed</li>
+            <li>Set your reminder times once, like an alarm</li>
+            <li>A wudu reminder before the salah you choose</li>
+            <li>A next-salah widget for your home screen, with the unlock</li>
           </ul>
+          <p class="free"><b>Free</b> <span>Salah times, reminders and the Qibla</span></p>
         </div>
       </article>
 
       <article class="feature flip reveal">
         <figure class="feature-media">
-          <div class="deco arch arch-ogee"></div>
-          <div class="phone"><img src="assets/shots/guided-salah-man.webp" alt="Guided Salah in Fajr: the figure raising both hands for the takbir, the last position faint beside it and gold arrows between them" width="390" height="844" loading="lazy"></div>
-          <figcaption class="pat-cap">Behind: the pierced <i>ogee</i> of the Lantern theme</figcaption>
+          <div class="deco arch arch-jali"></div>
+          <div class="phone"><img src="assets/shots/learn-wudu.webp" alt="Learn Wudu: the steps of wudu, each with its own picture" width="390" height="844" loading="lazy"></div>
+          <figcaption class="pat-cap">Behind: the Mughal <i>jali</i> of the Emerald theme</figcaption>
         </figure>
         <div>
-          <span class="eyebrow">Guided salah</span>
-          <h3>Many of us learned salah as children, and time has loosened what we knew.</h3>
-          <p>Guided salah walks through every position and every word at one steady pace, with stillness in each posture, so your salah rests on knowledge rather than habit.</p>
+          <h3>Wudu at the office sink.</h3>
+          <p>Practise Wudu shows the ten steps, each with its own picture, to learn whenever you like. Perform Wudu hands-free reads each step aloud in a calm voice, a man's or a woman's, so wet hands never need to touch the screen.</p>
           <ul class="ticks">
-            <li>Fard, Sunnah and Witr, for brothers and sisters</li>
-            <li>Every word in clear transliteration, phrase by phrase</li>
-            <li>Each step shows the position to take, and where you move from</li>
-            <li>Memorise each part, with its meaning, before you begin</li>
-            <li>Guided Taraweeh across Ramadan</li>
-            <li>Just press play. After that, nothing needs a tap</li>
+            <li>Gentle timing for every washing</li>
+            <li>The du'a after wudu, in full</li>
           </ul>
-          <p class="guide-link"><a href="how-to-pray-salah.html">Read the step-by-step salah guide</a></p>
+          <p class="free"><b>Free</b> <span>Practise Wudu: the 10 steps with pictures</span></p>
+          <p class="unlock-note">Perform Wudu hands-free comes with the one-time unlock.</p>
+          <p class="guide-link"><a href="how-to-make-wudu.html">Read the step-by-step wudu guide</a></p>
         </div>
       </article>
+    </div>
+  </section>
 
+  <div class="turn t-afternoon" aria-hidden="true"><span>Afternoon</span></div>
+
+  <!-- ============ Asr ============ -->
+  <section class="hour lit asr" id="asr" aria-labelledby="asr-title">
+    <div class="wrap">
+      <div class="hour-mark"><b>Asr</b><span>somewhere unfamiliar</span><i></i></div>
+      <article class="feature reveal">
+        <figure class="feature-media">
+          <div class="deco arch arch-mashrabiya"></div>
+          <div class="phone"><img src="assets/shots/qibla-compass.webp" alt="The Qibla compass in London: 119 degrees from north, turn right" width="390" height="844" loading="lazy"></div>
+          <figcaption class="pat-cap">Behind: the <i>mashrabiya</i> screen of the compass face</figcaption>
+        </figure>
+        <div>
+          <h2 id="asr-title">Wherever you stand, you face the same place.</h2>
+          <p>A different city, a friend's house, a quiet corner of a station. The Qibla compass settles on the direction and gives two long buzzes when you face it, so you can look up from the screen.</p>
+          <ul class="ticks">
+            <li>Location by GPS or a saved city</li>
+            <li>The times still show without a signal</li>
+            <li>Standard or Hanafi Asr, and your own minute changes to match your masjid</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <div class="turn t-sunset" aria-hidden="true"><span>Sunset</span></div>
+
+  <!-- ============ Maghrib ============ -->
+  <section class="hour dusk maghrib" id="maghrib" aria-labelledby="maghrib-title">
+    <div class="wrap">
+      <div class="hour-mark"><b>Maghrib</b><span>at the masjid</span><i></i></div>
       <article class="feature reveal">
         <figure class="feature-media">
           <div class="deco arch arch-khatam"></div>
@@ -229,63 +303,14 @@
         </figure>
         <div>
           <span class="eyebrow">Pray behind an imam</span>
-          <h3>Know what to do when you join the row.</h3>
+          <h2 id="maghrib-title">Know what to do when you join the row.</h2>
           <p>Practise praying behind an imam before you stand in the masjid. The app plays what an imam says aloud, each takbir and the recitation, and a short spoken cue tells you what to do: where your hands go, when to bow, what to read quietly. The quiet parts are never played; their words are on the screen.</p>
           <ul class="ticks">
             <li>The five fard salahs, Hanafi or Shafi'i, for brothers and sisters</li>
-            <li>The two fard rak'ahs of Fajr are free</li>
             <li>Practice for home: the masjid and the jama'ah are still the place for it</li>
           </ul>
-        </div>
-      </article>
-
-      <article class="feature reveal">
-        <figure class="feature-media">
-          <div class="deco arch arch-jali"></div>
-          <div class="phone"><img src="assets/shots/learn-wudu.webp" alt="Learn Wudu: the steps of wudu, each with its own picture" width="390" height="844" loading="lazy"></div>
-          <figcaption class="pat-cap">Behind: the Mughal <i>jali</i> of the Emerald theme</figcaption>
-        </figure>
-        <div>
-          <span class="eyebrow">Guided Wudu</span>
-          <h3>Every salah begins with purity.</h3>
-          <p>Ten illustrated steps, each read aloud in a calm voice, so wet hands never need to touch the screen. Learn the steps first, or simply follow along at the sink.</p>
-          <ul class="ticks">
-            <li>A male or a female guiding voice</li>
-            <li>Gentle timing for every washing</li>
-            <li>The supplication at the end, in full</li>
-          </ul>
-          <p class="guide-link"><a href="how-to-make-wudu.html">Read the step-by-step wudu guide</a></p>
-        </div>
-      </article>
-
-      <article class="feature flip reveal">
-        <figure class="feature-media">
-          <div class="deco arch arch-quatrefoil"></div>
-          <div class="phone"><img src="assets/shots/quran-read.webp" alt="Al-Fatihah in Guided Qur'an: each ayah in Arabic, with its pronunciation and its meaning" width="399" height="864" loading="lazy"></div>
-          <figcaption class="pat-cap">Behind: the Ottoman <i>quatrefoil</i> of the Iznik theme</figcaption>
-        </figure>
-        <div>
-          <span class="eyebrow">Guided Qur'an</span>
-          <h3>Do you know what you are saying?</h3>
-          <p>Read and listen to Al-Fatihah and Juz 'Amma ayah by ayah, each ayah with its pronunciation and its meaning, until the surahs you recite in salah stop being sounds you remember and become words you understand.</p>
-          <ul class="ticks">
-            <li>The meaning in 17 languages</li>
-            <li>Six reciters, ayah by ayah</li>
-            <li>Al-Kahf, Ya-Sin, Ar-Rahman and Al-Mulk too</li>
-          </ul>
-        </div>
-      </article>
-
-      <article class="feature reveal">
-        <figure class="feature-media">
-          <div class="deco arch arch-mashrabiya"></div>
-          <div class="phone"><img src="assets/shots/qibla-compass.webp" alt="The Qibla compass in London: 119 degrees from north, turn right" width="390" height="844" loading="lazy"></div>
-          <figcaption class="pat-cap">Behind: the <i>mashrabiya</i> screen of the compass face</figcaption>
-        </figure>
-        <div>
-          <span class="eyebrow">Qibla</span>
-          <h3>Wherever you stand, you face the same place.</h3>
-          <p>A live compass that settles calmly on the Qibla and gives a gentle buzz when you are aligned, corrected for the magnetic variation where you are.</p>
+          <p class="free"><b>Free</b> <span>The two fard rak'ahs of Fajr, in either school</span></p>
+          <p class="unlock-note">Dhuhr, Asr, Maghrib and Isha come with the one-time unlock.</p>
         </div>
       </article>
 
@@ -297,15 +322,80 @@
         </figure>
         <div>
           <span class="eyebrow">Du'as &amp; adhkar</span>
-          <h3>Remember Allah before the world reaches you.</h3>
-          <p>Du'as from the Qur'an and the Sunnah, each with its Arabic, a clear transliteration, its meaning and its source, and the morning and evening adhkar ready each day.</p>
+          <h3>Remember Allah as the day closes.</h3>
+          <p>Du'as from the Qur'an and the Sunnah, each with its Arabic, a clear transliteration, its meaning and its source, and the evening adhkar, ready from Asr. In the morning, the morning adhkar take their place.</p>
           <ul class="ticks">
             <li>Search every du'a, or browse by theme</li>
             <li>Your own lists, with one ready for Umrah and Hajj</li>
-            <li>The du'a of the day on the Salah Times screen</li>
           </ul>
+          <p class="free"><b>Free</b> <span>The du'a of the day, on the Salah Times screen</span></p>
+          <p class="unlock-note">The du'a library and adhkar come with the one-time unlock.</p>
         </div>
       </article>
+    </div>
+  </section>
+
+  <div class="turn t-night" aria-hidden="true"><span>Nightfall</span></div>
+
+  <!-- ============ Isha and the night ============ -->
+  <section class="hour night isha" id="isha" aria-labelledby="isha-title">
+    <div class="stars" aria-hidden="true"></div>
+    <div class="wrap">
+      <div class="hour-mark"><b>Isha</b><span>and the night</span><i></i></div>
+      <article class="feature reveal">
+        <figure class="feature-media">
+          <div class="deco arch arch-quatrefoil"></div>
+          <div class="phone"><img src="assets/shots/quran-read.webp" alt="Al-Fatihah in Guided Qur'an: each ayah in Arabic, with its pronunciation and its meaning" width="399" height="864" loading="lazy"></div>
+          <figcaption class="pat-cap">Behind: the Ottoman <i>quatrefoil</i> of the Iznik theme</figcaption>
+        </figure>
+        <div>
+          <span class="eyebrow">Guided Qur'an</span>
+          <h2 id="isha-title">Do you know what you are saying?</h2>
+          <p>Read and listen to Al-Fatihah and Juz 'Amma ayah by ayah, each ayah with its pronunciation and its meaning, until the surahs you recite in salah stop being sounds you remember and become words you understand.</p>
+          <ul class="ticks">
+            <li>The meaning in 17 languages</li>
+            <li>Six reciters, ayah by ayah</li>
+            <li>Al-Kahf, Ya-Sin, Ar-Rahman and Al-Mulk too</li>
+          </ul>
+          <p class="free"><b>Free</b> <span>The Qur'an's Arabic and meaning, in 17 languages, and Al-Fatihah in full: read and listen, with its pronunciation</span></p>
+          <p class="unlock-note">Qur'an pronunciation in 17 languages comes with the one-time unlock.</p>
+        </div>
+      </article>
+
+      <article class="feature flip reveal">
+        <figure class="feature-media">
+          <div class="deco arch arch-ogee"></div>
+          <div class="phone"><img src="assets/shots/guided-tab-midnight.webp" alt="The Guided tab: Guided Salah, Guided Wudu, and Guided Taraweeh waiting for Ramadan" width="390" height="844" loading="lazy"></div>
+          <figcaption class="pat-cap">Behind: the pierced <i>ogee</i> of the Lantern theme</figcaption>
+        </figure>
+        <div>
+          <span class="eyebrow">The last third</span>
+          <h3>For the hours most people sleep through.</h3>
+          <p>Salah Times shows the middle of the night and the start of its last third, for Tahajjud. Guided Salah has Tahajjud and Witr when you rise for them.</p>
+          <p>In Ramadan, Guided Taraweeh opens: 8 or 20 rak'ahs, reciting the whole Qur'an in order across the month and finishing on the 27th night, with a month plan.</p>
+          <p class="unlock-note">Tahajjud, Witr and Guided Taraweeh come with the one-time unlock. The night times are free.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  </div>
+
+  <!-- ============ What it doesn't do ============ -->
+  <section class="leftout" id="not-in-the-app" aria-labelledby="leftout-title">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">What it doesn't do</span>
+        <h2 id="leftout-title">Some things are left out <span class="gold-text">on purpose.</span></h2>
+        <p>An app for salah should know when to stay quiet. These are not missing features; they are decisions.</p>
+      </div>
+      <dl class="nots reveal">
+        <div><dt>No adhan</dt><dd>The reminder is a calm sound, a buzz, or nothing at all, and it never names the salah.</dd></div>
+        <div><dt>No tracker</dt><dd>It keeps no record of the salahs you pray or miss. That is between you and Allah.</dd></div>
+        <div><dt>No account</dt><dd>Nothing to sign up to and nothing to sign in to. There is no Salah Sphere server.</dd></div>
+        <div><dt>Not the whole Qur'an</dt><dd>Guided Qur'an holds Al-Fatihah, Juz 'Amma and four more surahs, to read and understand. Keep your mushaf for the rest.</dd></div>
+        <div><dt>Not the masjid</dt><dd>Guided Salah and Pray behind an imam teach the salah. The masjid and the jama'ah are still the place for it.</dd></div>
+      </dl>
     </div>
   </section>
 
@@ -329,13 +419,54 @@
         <div class="row old"><span>"Free" with adverts</span><s>Paid for with your attention</s></div>
         <div class="row new"><span>Salah Sphere</span><b>Free to download. One price, once. Yours for good.</b></div>
       </div>
-      <ul class="price-points reveal">
-        <li>Pay once</li>
-        <li>No renewals</li>
-        <li>No trial that turns into a charge</li>
-        <li>No adverts</li>
-      </ul>
       <p class="m-sign reveal">The maker of Salah Sphere</p>
+    </div>
+  </section>
+
+  <!-- ============ Price ============ -->
+  <section class="price" id="price" aria-labelledby="price-title">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">What's free, and what isn't</span>
+        <h2 id="price-title">Free to start.<br><span class="gold-text">One price for the rest.</span></h2>
+        <p>The same two lists the app shows you when you set it up, word for word.</p>
+      </div>
+      <div class="tiers reveal">
+        <div class="tier">
+          <h3>Free, from the start</h3>
+          <p class="tier-price">£0</p>
+          <ul class="ticks">
+            <li>Salah times, reminders and the Qibla</li>
+            <li>Guided Fajr: the 2 Fard rak'ahs</li>
+            <li>Practise Wudu: the 10 steps with pictures</li>
+            <li>The Qur'an's Arabic and meaning, in 17 languages</li>
+            <li>Al-Fatihah in full: read and listen, with its pronunciation</li>
+            <li>The du'a of the day</li>
+            <li>The Midnight theme, light and dark</li>
+          </ul>
+        </div>
+        <div class="tier gold">
+          <h3>The one-time unlock</h3>
+          <p class="tier-price">£9.99 <span>once</span></p>
+          <p class="tier-note">£6.99 this Ramadan. One payment, yours for life. No subscription, no adverts, no account.</p>
+          <ul class="ticks">
+            <li>Guided Dhuhr, Asr, Maghrib and Isha</li>
+            <li>Sunnah, nafl, Witr and Tahajjud</li>
+            <li>Your choice of surahs and reciter</li>
+            <li>Memorise the salah</li>
+            <li>Guided Taraweeh with the month plan</li>
+            <li>Perform Wudu hands-free</li>
+            <li>Qur'an pronunciation in 17 languages</li>
+            <li>The du'a library and adhkar</li>
+            <li>Widgets and five more themes</li>
+          </ul>
+        </div>
+      </div>
+      <ul class="small-print reveal">
+        <li>Pray behind an imam follows Guided Salah: Fajr's two fard rak'ahs are free, and the other four salahs come with the unlock.</li>
+        <li>Backup and restore is free for everyone. The unlock is never in a backup; Restore purchase brings it back on a new phone.</li>
+        <li>The unlock can't be bought yet. It opens when Salah Sphere is in Google Play and the App Store.</li>
+      </ul>
     </div>
   </section>
 
@@ -356,7 +487,7 @@
         <li><div class="sw sw-minimal"></div><b>Minimal</b><span>Stars, and nothing more</span></li>
       </ul>
       <div class="gallery reveal">
-        <figure><div class="phone"><img src="assets/shots/guided-tab-midnight.webp" alt="The Guided tab in the Midnight theme" width="390" height="844" loading="lazy"></div><figcaption>Midnight</figcaption></figure>
+        <figure><div class="phone"><img src="assets/shots/guided-salah-woman.webp" alt="Guided Salah in the Midnight theme, with the woman figure" width="390" height="844" loading="lazy"></div><figcaption>Midnight</figcaption></figure>
         <figure class="lift"><div class="phone"><img src="assets/shots/theme-picker.webp" alt="The theme picker: six themes, Midnight chosen and the other five marked Premium" width="390" height="844" loading="lazy"></div><figcaption>Choose your theme</figcaption></figure>
         <figure><div class="phone"><img src="assets/shots/guided-tab-lantern.webp" alt="The Guided tab in the Lantern theme" width="390" height="844" loading="lazy"></div><figcaption>Lantern</figcaption></figure>
       </div>
@@ -387,7 +518,7 @@
   <section class="closing has-deco" id="coming" aria-labelledby="closing-title">
     <div class="deco disc disc-khatam d-close-disc" aria-hidden="true"></div>
     <div class="wrap reveal">
-      <img src="assets/img/icon-240.png" alt="The Salah Sphere icon: a gold crescent cradling the Earth with a salah mat" width="120" height="120">
+      <img src="assets/img/icon-240.png" alt="The Salah Sphere icon: a gold crescent cradling the Earth with a salah mat" width="120" height="120" loading="lazy">
       <span class="eyebrow">Coming Ramadan 2027</span>
       <h2 id="closing-title">You don't need an app for salah.<br><span class="gold-text">The next one is already on its way.</span></h2>
       <p>Salah Sphere arrives on Android and iPhone for Ramadan 2027, in shā'&nbsp;Allāh. Until then, write to me with a question or a thought; I read every message.</p>
@@ -408,7 +539,8 @@
         <p>A calm, private companion for your daily salah.</p>
       </div>
       <nav aria-label="Footer">
-        <a href="#inside">Inside the app</a>
+        <a href="#inside">A day of salah</a>
+        <a href="#price">Price</a>
         <a href="#no-subscription">No subscription</a>
         <a href="guides.html">Guides</a>
         <a href="privacy.html">Privacy</a>
