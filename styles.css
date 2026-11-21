@@ -627,21 +627,17 @@ section { padding: clamp(70px, 10vw, 130px) 0; }
 @media (max-width: 640px) { .nav-links a[aria-current="page"] { display: none; } }
 
 /* ==========================================================================
-   Home: one day of salah (21 Nov 2026)
-   The page runs from the hour before Fajr to the night. Each section's
-   background is the light of its hour; the bands between them carry the
-   change (sunrise, midday, afternoon, sunset, nightfall). No animation is
-   involved, so there is nothing to switch off for reduced motion; the gentle
-   reveal already respects it.
+   Home page (21 Nov 2026)
+   The sections' backgrounds move from dark to light and back to dark down
+   the page. No animation is involved, so there is nothing to switch off for
+   reduced motion; the gentle reveal already respects it.
    ========================================================================== */
 
-/* ---------- The hour before Fajr ---------- */
+/* ---------- Hero ---------- */
 .predawn { position: relative; overflow: clip; padding: clamp(44px, 7vw, 84px) 0 clamp(40px, 6vw, 80px);
   background: linear-gradient(180deg, #060a18 0%, #0a1230 40%, #151c45 66%, #2a2550 86%, #43304f 100%); }
 .predawn .stars, .night .stars { position: absolute; inset: 0 0 40% 0; background: url("assets/patterns/tile-stars-gold.svg"); background-size: 140px; opacity: .09;
   -webkit-mask: linear-gradient(#000, transparent); mask: linear-gradient(#000, transparent); pointer-events: none; }
-.predawn .horizon { position: absolute; left: -10%; right: -10%; bottom: -150px; height: 280px; border-radius: 50%;
-  background: radial-gradient(closest-side, rgba(255, 176, 140, .22), rgba(255, 176, 140, 0)); pointer-events: none; }
 .hero2 { position: relative; z-index: 1; display: grid; grid-template-columns: 1.15fr .85fr; gap: 48px; align-items: center; }
 .hero2 h1 { font-size: clamp(44px, 5.6vw, 72px); line-height: 1.04; }
 .hero2 h1 .nw { white-space: nowrap; }
@@ -650,17 +646,6 @@ section { padding: clamp(70px, 10vw, 130px) 0; }
 .facts b { color: var(--gold-hi); font-weight: 750; }
 .when { margin: 10px 0 0; color: var(--muted); font-size: 15.5px; }
 .when a { white-space: nowrap; margin-left: 6px; }
-
-/* The day: the five salahs as the page's own contents */
-.day { list-style: none; display: flex; margin: 0 0 34px; padding: 0; position: relative; max-width: 480px; }
-.day::before { content: ""; position: absolute; left: 6px; right: 6px; top: 6px; height: 1px;
-  background: linear-gradient(90deg, rgba(231,190,105,.6), rgba(231,190,105,.18)); }
-.day li { flex: 1; position: relative; }
-.day a { display: block; padding: 22px 0 6px; color: var(--muted); text-decoration: none; font: 700 12.5px/1 var(--sans); letter-spacing: .12em; text-transform: uppercase; }
-.day a::before { content: ""; position: absolute; left: 0; top: 0; width: 13px; height: 13px; border-radius: 50%; background: var(--ink); border: 1px solid rgba(231,190,105,.6); }
-.day a:hover { color: var(--gold-hi); }
-.day .is-next a { color: var(--gold-hi); }
-.day .is-next a::before { background: var(--gold); box-shadow: 0 0 0 5px rgba(231,190,105,.16), 0 0 22px rgba(231,190,105,.6); }
 
 /* The real notification, built in HTML */
 .stage { position: relative; justify-self: center; width: 300px; }
@@ -676,13 +661,9 @@ section { padding: clamp(70px, 10vw, 130px) 0; }
 .notif-cap { margin: 18px 0 0; font-size: 14.5px; color: #B3BDD6; text-align: center; }
 .notif-cap b { color: var(--cream); font-weight: 650; }
 
-/* ---------- Every hour ---------- */
+/* ---------- Feature sections ---------- */
 .hour { position: relative; overflow: clip; padding: clamp(64px, 8vw, 100px) 0 clamp(64px, 8vw, 100px); }
 .hour > .wrap { position: relative; z-index: 1; }
-.hour-mark { display: flex; align-items: baseline; gap: 14px; margin-bottom: 26px; }
-.hour-mark b { font: 750 13px/1 var(--sans); letter-spacing: .22em; text-transform: uppercase; color: var(--gold); }
-.hour-mark span { font: italic 400 19px/1 var(--serif); color: var(--cream); }
-.hour-mark i { flex: 1; height: 1px; align-self: center; background: linear-gradient(90deg, var(--line), transparent); }
 .hour .feature { padding: clamp(28px, 4vw, 48px) 0; }
 .hour .feature h2 { font-size: clamp(32px, 3.8vw, 46px); margin-top: 12px; }
 .hour .feature h3 { font-size: clamp(28px, 3vw, 38px); margin-top: 12px; }
@@ -694,17 +675,7 @@ section { padding: clamp(70px, 10vw, 130px) 0; }
 .unlock-note, .feature .unlock-note, .fajr .copy .unlock-note { color: var(--muted); font-size: 15px; line-height: 1.55; margin: 12px 0 0 !important; max-width: 33em; }
 .unlock-note + .guide-link, .free + .guide-link { margin-top: 14px; }
 
-/* The bands where the light changes */
-.turn { position: relative; height: 128px; display: grid; place-items: center; }
-.turn span { font: 700 12px/1 var(--sans); letter-spacing: .24em; text-transform: uppercase; color: #F5ECD8;
-  background: rgba(10, 16, 34, .82); padding: 9px 16px; border-radius: 999px; }
-.t-sunrise { background: linear-gradient(180deg, #7f4e5c 0%, #b8746a 40%, #e2a97f 72%, #f3d3a8 100%); }
-.t-noon { background: linear-gradient(180deg, #f8eedc 0%, #f3f1ea 55%, #eef2f2 100%); height: 96px; }
-.t-afternoon { background: linear-gradient(180deg, #e8eef1 0%, #efe9d6 55%, #f3e4c4 100%); height: 96px; }
-.t-sunset { background: linear-gradient(180deg, #eedab0 0%, #e4a877 28%, #c86d5e 52%, #8c4459 76%, #3a2449 100%); height: 150px; }
-.t-night { background: linear-gradient(180deg, #241a3e 0%, #171a3a 55%, #0f1530 100%); height: 96px; }
-
-/* Fajr: first light */
+/* Guided Fajr */
 .fajr { background: linear-gradient(180deg, #43304f 0%, #563a55 38%, #6c4459 72%, #7f4e5c 100%);
   --text: #FBE9DA; --muted: #EBCFC3; --cream: #FFF6E8; --line: rgba(252, 225, 196, .35); --gold: #FBD596; }
 .fajr .copy { display: grid; grid-template-columns: 1.15fr .85fr; gap: 48px; align-items: end; }
@@ -729,7 +700,7 @@ section { padding: clamp(70px, 10vw, 130px) 0; }
 .rk .chev { flex: 0 0 22px; align-self: flex-start; margin-top: 70px; }
 .rakah .foot { margin: 18px 0 0; color: #5E4F48; font-size: 14.5px; }
 
-/* The light sections: morning, Dhuhr, Asr */
+/* The light sections */
 .lit { --text: #2E3652; --muted: #4A5068; --cream: #1B2442; --gold: #7A4C0E; --gold-hi: #8E5C14; --gold-deep: #5E3A08;
   --line: rgba(122, 76, 14, .28); --line-soft: rgba(27, 36, 66, .12); color: var(--text); color-scheme: light; }
 .lit .gold-text { background: none; -webkit-background-clip: border-box; background-clip: border-box; color: #7A4C0E; }
@@ -739,14 +710,15 @@ section { padding: clamp(70px, 10vw, 130px) 0; }
 .lit .ticks li::before { background: #B98634; }
 .lit .pat-cap { color: #3F4560; }
 .lit .pat-cap i { color: #5E3A08; }
-.morning { background: linear-gradient(180deg, #f3d3a8 0%, #f6e2c4 45%, #f8eedc 100%); padding-bottom: clamp(56px, 7vw, 90px); }
+.morning { background: linear-gradient(180deg, #7f4e5c 0, #c98a72 40px, #f3d3a8 84px, #f6e2c4 45%, #f8eedc 100%); padding-bottom: clamp(56px, 7vw, 90px); }
+.morning .eyebrow { color: #63400A; }
 .morning .section-head em { font-family: var(--serif); color: var(--cream); font-size: 1.04em; }
 .morning .stat { background: rgba(255, 255, 255, .55); border-color: rgba(122, 76, 14, .22); }
 .morning .stat b { color: #7A4C0E; background: none; -webkit-text-fill-color: currentColor; }
 .morning .stat em { color: #5A4A3A; }
 .d-morning-disc { width: 720px; right: -300px; top: -120px; opacity: .22; }
-.dhuhr { background: linear-gradient(180deg, #eef2f2 0%, #eaf0f3 60%, #e8eef1 100%); }
-.asr { background: linear-gradient(180deg, #f3e4c4 0%, #f1dcb2 60%, #eedab0 100%); }
+.dhuhr { background: linear-gradient(180deg, #f8eedc 0, #eef2f2 64px, #eaf0f3 60%, #e8eef1 100%); }
+.asr { background: linear-gradient(180deg, #e8eef1 0, #f3e4c4 64px, #f1dcb2 60%, #eedab0 100%); }
 
 .notif-media { padding-top: 0; gap: 14px; justify-content: center; }
 .notif-media::before { display: none; }
@@ -754,9 +726,9 @@ section { padding: clamp(70px, 10vw, 130px) 0; }
 .notif-media .notif:first-child { transform: scale(.96); }
 .notif-media .pat-cap { margin-top: 10px; }
 
-/* The dark hours: Maghrib and Isha */
-.dusk { background: linear-gradient(180deg, #3a2449 0%, #2e2045 50%, #241a3e 100%); --muted: #B9B0CF; --line-soft: rgba(215, 205, 234, .12); }
-.night { background: linear-gradient(180deg, #0f1530 0%, #0c1229 60%, #0A1022 100%); }
+/* The dark sections */
+.dusk { background: linear-gradient(180deg, #eedab0 0, #c86d5e 22px, #6e3651 44px, #3a2449 60px, #2e2045 50%, #241a3e 100%); --muted: #B9B0CF; --line-soft: rgba(215, 205, 234, .12); }
+.night { background: linear-gradient(180deg, #241a3e 0, #0f1530 80px, #0c1229 60%, #0A1022 100%); }
 .dusk .feature-media::before { background: radial-gradient(circle, rgba(200, 109, 94, .35), rgba(231, 190, 105, .05) 45%, transparent 68%); }
 
 /* ---------- What it doesn't do ---------- */
@@ -805,13 +777,9 @@ section { padding: clamp(70px, 10vw, 130px) 0; }
   .rk span { font-size: 12.5px; }
   .rk span small { font-size: 11.5px; }
   .tier { padding: 24px 20px 26px; }
-  .turn { height: 96px; }
-  .t-sunset { height: 120px; }
   .free { display: flex; }
 }
 @media (max-width: 400px) {
   .stage .notif { left: -18px; width: 250px; }
-  .day a { font-size: 11px; letter-spacing: .07em; }
-  .hour-mark span { font-size: 17px; }
 }
 @media (max-width: 359px) { .hero2 h1 { font-size: 11.5vw; } }
