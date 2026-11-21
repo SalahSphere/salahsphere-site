@@ -627,25 +627,22 @@ section { padding: clamp(70px, 10vw, 130px) 0; }
 @media (max-width: 640px) { .nav-links a[aria-current="page"] { display: none; } }
 
 /* ==========================================================================
-   Home page (21 Nov 2026)
-   The sections' backgrounds move from dark to light and back to dark down
-   the page. No animation is involved, so there is nothing to switch off for
-   reduced motion; the gentle reveal already respects it.
+   Home page (21 Nov 2026, third version)
+   One dark look, like the app's Midnight theme, with one paper section.
+   The order follows what a visitor asks: what it is, guided salah, the
+   everyday basics, Qur'an and du'as, what it costs, what it doesn't do.
    ========================================================================== */
 
 /* ---------- Hero ---------- */
-.predawn { position: relative; overflow: clip; padding: clamp(44px, 7vw, 84px) 0 clamp(40px, 6vw, 80px);
-  background: linear-gradient(180deg, #060a18 0%, #0a1230 40%, #151c45 66%, #2a2550 86%, #43304f 100%); }
-.predawn .stars, .night .stars { position: absolute; inset: 0 0 40% 0; background: url("assets/patterns/tile-stars-gold.svg"); background-size: 140px; opacity: .09;
-  -webkit-mask: linear-gradient(#000, transparent); mask: linear-gradient(#000, transparent); pointer-events: none; }
-.hero2 { position: relative; z-index: 1; display: grid; grid-template-columns: 1.15fr .85fr; gap: 48px; align-items: center; }
-.hero2 h1 { font-size: clamp(44px, 5.6vw, 72px); line-height: 1.04; }
+.hero2 { display: grid; grid-template-columns: 1.15fr .85fr; gap: 48px; align-items: center; }
+.hero2 h1 { font-size: clamp(44px, 5.6vw, 72px); line-height: 1.04; margin-top: 18px; }
 .hero2 h1 .nw { white-space: nowrap; }
 .hero2 .lead { margin: 22px 0 0; max-width: 31em; }
 .facts { margin: 26px 0 0; color: var(--cream); font-weight: 650; font-size: 17px; }
 .facts b { color: var(--gold-hi); font-weight: 750; }
 .when { margin: 10px 0 0; color: var(--muted); font-size: 15.5px; }
 .when a { white-space: nowrap; margin-left: 6px; }
+.hero { padding-bottom: clamp(56px, 8vw, 96px); }
 
 /* The real notification, built in HTML */
 .stage { position: relative; justify-self: center; width: 300px; }
@@ -661,31 +658,19 @@ section { padding: clamp(70px, 10vw, 130px) 0; }
 .notif-cap { margin: 18px 0 0; font-size: 14.5px; color: #B3BDD6; text-align: center; }
 .notif-cap b { color: var(--cream); font-weight: 650; }
 
-/* ---------- Feature sections ---------- */
-.hour { position: relative; overflow: clip; padding: clamp(64px, 8vw, 100px) 0 clamp(64px, 8vw, 100px); }
-.hour > .wrap { position: relative; z-index: 1; }
-.hour .feature { padding: clamp(28px, 4vw, 48px) 0; }
-.hour .feature h2 { font-size: clamp(32px, 3.8vw, 46px); margin-top: 12px; }
-.hour .feature h3 { font-size: clamp(28px, 3vw, 38px); margin-top: 12px; }
-.hour .feature > div > h2:first-child, .hour .feature > div > h3:first-child { margin-top: 0; }
-
-.free, .feature .free, .fajr .copy .free { display: inline-flex; gap: 10px; align-items: baseline; margin: 24px 0 0; padding: 9px 16px 9px 10px; border-radius: 18px;
-  background: rgba(10, 16, 34, .84); color: #FBE3A2; font: 600 14.5px/1.4 var(--sans); max-width: 34em; }
-.free b { flex: none; color: #0A1022; background: #E7BE69; border-radius: 999px; padding: 2px 9px; font-size: 11.5px; letter-spacing: .1em; text-transform: uppercase; }
-.unlock-note, .feature .unlock-note, .fajr .copy .unlock-note { color: var(--muted); font-size: 15px; line-height: 1.55; margin: 12px 0 0 !important; max-width: 33em; }
-.unlock-note + .guide-link, .free + .guide-link { margin-top: 14px; }
-
-/* Guided Fajr */
-.fajr { background: linear-gradient(180deg, #43304f 0%, #563a55 38%, #6c4459 72%, #7f4e5c 100%);
-  --text: #FBE9DA; --muted: #EBCFC3; --cream: #FFF6E8; --line: rgba(252, 225, 196, .35); --gold: #FBD596; }
-.fajr .copy { display: grid; grid-template-columns: 1.15fr .85fr; gap: 48px; align-items: end; }
-.fajr h2 { font-size: clamp(36px, 4.6vw, 58px); line-height: 1.06; max-width: 14em; }
-.fajr .copy p { color: var(--text); font-size: 18px; margin: 20px 0 0; max-width: 32em; }
-.fajr .ticks li::before { background: var(--gold); }
-.fajr a { color: #FFE3A8; }
+/* ---------- Sections ---------- */
+.sec { border-top: 1px solid var(--line-soft); }
+.sec h3 { font-size: clamp(24px, 2.4vw, 30px); }
+.lede { display: grid; grid-template-columns: 1fr 1fr; gap: 20px 56px; align-items: start; }
+.lede .eyebrow { grid-column: 1 / -1; }
+.lede h2 { font-size: clamp(32px, 3.9vw, 48px); line-height: 1.12; margin: 0; }
+.lede-body p { margin: 0; font-size: 18px; }
+.lede-body .ticks { margin-top: 18px; }
+.lede-body .guide-link { margin-top: 20px; }
+.guided .feature { padding-bottom: 0; }
 
 /* One rak'ah, drawn with the app's own figures */
-.rakah { margin: 56px 0 0; padding: 30px 26px 22px; border-radius: 28px; background: #FFF8EC; color: #1B2442; box-shadow: 0 20px 60px rgba(40, 20, 30, .28); }
+.rakah { margin: 48px 0 0; padding: 30px 26px 22px; border-radius: 28px; background: #FFF8EC; color: #1B2442; box-shadow: 0 20px 60px rgba(0, 0, 0, .35); }
 .rakah h3 { margin: 0 0 4px; font-size: 26px; color: #1B2442; }
 .rakah .sub { margin: 0 0 22px; color: #574741; font-size: 15px; max-width: 46em; }
 .rk { list-style: none; margin: 0; padding: 0; display: flex; align-items: flex-start; justify-content: space-between; gap: 6px; }
@@ -700,62 +685,43 @@ section { padding: clamp(70px, 10vw, 130px) 0; }
 .rk .chev { flex: 0 0 22px; align-self: flex-start; margin-top: 70px; }
 .rakah .foot { margin: 18px 0 0; color: #5E4F48; font-size: 14.5px; }
 
-/* The light sections */
-.lit { --text: #2E3652; --muted: #4A5068; --cream: #1B2442; --gold: #7A4C0E; --gold-hi: #8E5C14; --gold-deep: #5E3A08;
-  --line: rgba(122, 76, 14, .28); --line-soft: rgba(27, 36, 66, .12); color: var(--text); color-scheme: light; }
-.lit .gold-text { background: none; -webkit-background-clip: border-box; background-clip: border-box; color: #7A4C0E; }
-.lit .feature-media::before { background: radial-gradient(circle, rgba(255, 255, 255, .75), rgba(255, 255, 255, .25) 45%, transparent 68%); }
-.lit .feature-media .arch { opacity: .55; }
-.lit .phone { box-shadow: 0 30px 70px rgba(27, 36, 66, .32), 0 0 0 1px rgba(122, 76, 14, .35), inset 0 0 0 1px rgba(255,255,255,.06); }
-.lit .ticks li::before { background: #B98634; }
-.lit .pat-cap { color: #3F4560; }
-.lit .pat-cap i { color: #5E3A08; }
-.morning { background: linear-gradient(180deg, #7f4e5c 0, #c98a72 40px, #f3d3a8 84px, #f6e2c4 45%, #f8eedc 100%); padding-bottom: clamp(56px, 7vw, 90px); }
-.morning .eyebrow { color: #63400A; }
-.morning .section-head em { font-family: var(--serif); color: var(--cream); font-size: 1.04em; }
-.morning .stat { background: rgba(255, 255, 255, .55); border-color: rgba(122, 76, 14, .22); }
-.morning .stat b { color: #7A4C0E; background: none; -webkit-text-fill-color: currentColor; }
-.morning .stat em { color: #5A4A3A; }
-.d-morning-disc { width: 720px; right: -300px; top: -120px; opacity: .22; }
-.dhuhr { background: linear-gradient(180deg, #f8eedc 0, #eef2f2 64px, #eaf0f3 60%, #e8eef1 100%); }
-.asr { background: linear-gradient(180deg, #e8eef1 0, #f3e4c4 64px, #f1dcb2 60%, #eedab0 100%); }
-
-.notif-media { padding-top: 0; gap: 14px; justify-content: center; }
-.notif-media::before { display: none; }
-.notif-media .notif { width: min(340px, 100%); position: relative; z-index: 1; }
-.notif-media .notif:first-child { transform: scale(.96); }
-.notif-media .pat-cap { margin-top: 10px; }
-
-/* The dark sections */
-.dusk { background: linear-gradient(180deg, #eedab0 0, #c86d5e 22px, #6e3651 44px, #3a2449 60px, #2e2045 50%, #241a3e 100%); --muted: #B9B0CF; --line-soft: rgba(215, 205, 234, .12); }
-.night { background: linear-gradient(180deg, #241a3e 0, #0f1530 80px, #0c1229 60%, #0A1022 100%); }
-.dusk .feature-media::before { background: radial-gradient(circle, rgba(200, 109, 94, .35), rgba(231, 190, 105, .05) 45%, transparent 68%); }
-
-/* ---------- What it doesn't do ---------- */
-.leftout { border-top: 1px solid var(--line-soft); }
-.nots { max-width: 860px; margin: 0 auto; padding: 0; border-top: 1px solid var(--line); }
-.nots > div { display: grid; grid-template-columns: 220px 1fr; gap: 8px 32px; padding: 22px 0; border-bottom: 1px solid var(--line); }
-.nots dt { font-family: var(--serif); font-size: 25px; line-height: 1.25; color: var(--cream); }
-.nots dd { margin: 0; color: var(--text); font-size: 17px; }
+/* Short text blocks, then the phones that go with them */
+.three, .two { display: grid; gap: 28px 40px; max-width: 1060px; margin: 0 auto; }
+.three { grid-template-columns: repeat(3, 1fr); }
+.two { grid-template-columns: repeat(2, 1fr); max-width: 900px; }
+.three > div, .two > div { border-top: 1px solid var(--line); padding-top: 20px; }
+.three p, .two p { margin: 10px 0 0; color: var(--text); font-size: 16.5px; }
+.three .guide-link { margin-top: 12px; }
+.pair { display: flex; justify-content: center; gap: clamp(16px, 4vw, 56px); margin: 52px auto 0; }
+.pair figure { margin: 0; width: min(270px, 42vw); text-align: center; }
+.pair .phone { width: 100%; }
+.pair figcaption { margin-top: 14px; font: 600 14px/1.3 var(--sans); color: var(--muted); }
+.quran .section-head em { font-family: var(--serif); color: var(--cream); font-size: 1.04em; }
+.quran .aside { margin-top: 64px; }
 
 /* ---------- Price ---------- */
-.price { border-top: 1px solid var(--line-soft); }
-.tiers { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; max-width: 980px; margin: 0 auto; }
+.tiers { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; max-width: 980px; margin: 0 auto; align-items: start; }
 .tier { border: 1px solid var(--line-soft); border-radius: 26px; padding: 30px 30px 32px; background: rgba(255, 255, 255, .025); }
 .tier.gold { border-color: rgba(231, 190, 105, .45); background: linear-gradient(160deg, rgba(231,190,105,.12), rgba(231,190,105,.03) 60%); }
 .tier h3 { font-size: 26px; }
 .tier-price { margin: 10px 0 0; font: 400 46px/1.1 var(--serif); color: var(--gold-hi); }
 .tier-price span { font-size: 20px; font-style: italic; color: var(--muted); }
 .tier-note { margin: 8px 0 0; color: var(--text); font-size: 15.5px; }
-.tier .ticks { margin-top: 22px; }
+.tier .ticks { margin-top: 20px; }
 .small-print { list-style: none; max-width: 980px; margin: 26px auto 0; padding: 0; display: grid; gap: 8px; color: var(--muted); font-size: 15px; }
 .small-print li { padding-left: 22px; position: relative; }
 .small-print li::before { content: ""; position: absolute; left: 4px; top: .7em; width: 8px; height: 1px; background: var(--gold); }
 
+/* ---------- What it doesn't do (on paper) ---------- */
+.nots { max-width: 860px; margin: 0 auto; padding: 0; border-top: 1px solid rgba(122, 84, 22, .28); }
+.nots > div { display: grid; grid-template-columns: 240px 1fr; gap: 6px 32px; padding: 20px 0; border-bottom: 1px solid rgba(122, 84, 22, .28); }
+.nots dt { font-family: var(--serif); font-size: 24px; line-height: 1.25; color: var(--paper-ink); }
+.nots dd { margin: 0; color: #3A4260; font-size: 17px; }
+
 /* ---------- Phones and tablets ---------- */
 @media (max-width: 880px) {
-  .hero2, .fajr .copy { grid-template-columns: 1fr; gap: 0; }
-  .fajr .copy > div + div { margin-top: 6px; }
+  .hero2, .lede { grid-template-columns: 1fr; gap: 0; }
+  .lede h2 { margin: 12px 0 18px; }
   .stage { margin-top: 40px; width: 250px; }
   .stage .phone { width: 250px; }
   .stage .notif { left: -40px; top: 40px; width: 272px; }
@@ -768,8 +734,9 @@ section { padding: clamp(70px, 10vw, 130px) 0; }
   .rk .sit img { max-height: 76px; }
   .rk .sujood img { max-height: 46px; }
   .rakah { padding: 24px 16px 18px; }
-  .tiers { grid-template-columns: 1fr; }
+  .three, .two, .tiers { grid-template-columns: 1fr; }
   .nots > div { grid-template-columns: 1fr; }
+  .pair { margin-top: 40px; }
 }
 @media (max-width: 520px) {
   .rk { gap: 4px; }
@@ -777,7 +744,7 @@ section { padding: clamp(70px, 10vw, 130px) 0; }
   .rk span { font-size: 12.5px; }
   .rk span small { font-size: 11.5px; }
   .tier { padding: 24px 20px 26px; }
-  .free { display: flex; }
+  .pair figure { width: 44vw; }
 }
 @media (max-width: 400px) {
   .stage .notif { left: -18px; width: 250px; }
