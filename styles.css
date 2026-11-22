@@ -762,3 +762,18 @@ section { padding: clamp(70px, 10vw, 130px) 0; }
   .hero-phone { margin-top: 40px; width: 250px; }
   .hero-phone .phone { width: 250px; }
 }
+
+/* ---------- Our promise page (22 Nov 2026) ---------- */
+.promises { max-width: 860px; margin: 24px auto 0; padding: 0; border-top: 1px solid var(--line); }
+.promises > div { display: grid; grid-template-columns: 260px 1fr; gap: 6px 36px; padding: 24px 0; border-bottom: 1px solid var(--line-soft); }
+.promises dt { font: 400 26px/1.25 var(--serif); color: var(--cream); }
+.promises dd { margin: 0; color: var(--text); font-size: 17px; }
+.pays { max-width: 860px; margin: 56px auto 0; padding: 32px 32px 34px; border-radius: 26px; border: 1px solid rgba(231, 190, 105, .45);
+  background: linear-gradient(160deg, rgba(231,190,105,.12), rgba(231,190,105,.03) 60%); }
+.pays h2 { font-size: clamp(28px, 3vw, 36px); }
+.pays p { color: var(--text); margin: 12px 0 0; max-width: 40em; }
+.pays .actions { margin-top: 24px; }
+@media (max-width: 880px) {
+  .promises > div { grid-template-columns: 1fr; }
+  .pays { padding: 24px 20px 26px; }
+}
