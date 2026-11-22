@@ -750,3 +750,15 @@ section { padding: clamp(70px, 10vw, 130px) 0; }
   .stage .notif { left: -18px; width: 250px; }
 }
 @media (max-width: 359px) { .hero2 h1 { font-size: 11.5vw; } }
+
+/* ---------- Home, fifth version (22 Nov 2026): the opening leads with guided salah ---------- */
+.hero2 h1 { font-size: clamp(40px, 5vw, 66px); }
+.hero-phone { margin: 0; justify-self: center; width: 300px; text-align: center; }
+.hero-phone .phone { width: 300px; }
+.hero-phone figcaption { margin-top: 16px; font: 600 14px/1.3 var(--sans); color: var(--muted); }
+.notif-show { margin: 0 auto 44px; max-width: 360px; }
+.notif-show .notif { width: 100%; }
+@media (max-width: 880px) {
+  .hero-phone { margin-top: 40px; width: 250px; }
+  .hero-phone .phone { width: 250px; }
+}
