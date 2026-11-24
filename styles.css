@@ -703,6 +703,9 @@ section { padding: clamp(70px, 10vw, 130px) 0; }
 /* Three phones in a row (24 Nov 2026): Salah Times, Qibla and Guided Wudu.
    Smaller frames on a phone so all three fit across the screen. */
 .pair.trio { gap: clamp(10px, 3vw, 44px); }
+/* The whole screenshot shows, not cropped to the frame's shape: cropping cut the
+   side off the bottom tab bar, so "Salah Times" showed as "lah Times" (24 Nov 2026). */
+.pair .phone img { object-fit: contain; }
 .pair.trio figure { width: min(250px, 27vw); }
 @media (max-width: 760px) {
   .pair.trio .phone { border-radius: 24px; padding: 5px; }
