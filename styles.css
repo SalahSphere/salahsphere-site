@@ -545,6 +545,10 @@ section { padding: clamp(70px, 10vw, 130px) 0; }
 /* Footer links get a finger-sized tap area. */
 .foot nav a { display: inline-block; padding: 10px 0; }
 .foot nav { gap: 0 22px; }
+/* A link that is switched off (24 Nov 2026): the Instagram account is disabled,
+   so its button and footer link stay in place, greyed out and not clickable. */
+.is-off { opacity: 0.4; cursor: default; pointer-events: none; }
+.foot nav .is-off { display: inline-block; padding: 10px 0; color: var(--text); font-weight: 600; font-size: 15px; }
 /* On a phone the release line sits on two centred lines, "Coming Ramadan 2027"
    over "Android & iPhone", and the box is only as wide as the text. */
 @media (max-width: 480px) {
